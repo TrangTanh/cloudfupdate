@@ -4,11 +4,11 @@
 # CHANGE THESE
 
 # API Token (Recommended)                                                                      #####
-auth_token="xxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+auth_token="zEk2I7QBDiB9OWFelx2WOm8uRZYlvZQD-7hGUTga"
 
 # Domain and DNS record for synchronization
-zone_identifier="f1nd7h3fuck1n6z0n31d3n71f13r4l50" # Can be found in the "Overview" tab of your domain
-record_name="ipv4.example.org"                     # Which record you want to be synced
+zone_identifier="e2989350da8e80db009ef442f7ef70d6" # Can be found in the "Overview" tab of your domain
+record_name="homefast.online"                     # Which record you want to be synced
 
 # DO NOT CHANGE LINES BELOW
 
