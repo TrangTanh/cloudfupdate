@@ -59,7 +59,7 @@ else
 fi
 
 # The secret sause for executing the update
-json_data_v4="'"'{"id":"'${zone_identifier}'","type":"A","proxied":true,"name":"'${record_name}'","content":"'${ip}'","ttl":120}'"'"
+json_data_v4="'"'{"id":"'${zone_identifier}'","type":"A","proxied":false,"name":"'${record_name}'","content":"'${ip}'","ttl":120}'"'"
 update_cmd=( curl -s -X PUT '"https://api.cloudflare.com/client/v4/zones/'${zone_identifier}'/dns_records/'${record_identifier}'"' "${header_auth_paramheader[@]}" -H '"Content-Type: application/json"' )
 
 # Execution result
