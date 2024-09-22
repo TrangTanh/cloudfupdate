@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test 1 by trung anh
 # Forked from benkulbertis/cloudflare-update-record.sh
 # CHANGE THESE
 
@@ -13,14 +13,14 @@ record_name="homefast.online"                     # Which record you want to be 
 # DO NOT CHANGE LINES BELOW
 
 # SCRIPT START
-echo -e "Check Initiated"
+echo -e "bắt đầu kiểm tra"
 
 # Check for current external network IP
 ip=$(curl -s4 https://icanhazip.com/)
 if [[ ! -z "${ip}" ]]; then
-  echo -e "  > Fetched current external network IP: ${ip}"
+  echo -e "  > lấy địa chỉ IP public thành công: ${ip}"
 else
-  >&2 echo -e "Network error, cannot fetch external network IP."
+  >&2 echo -e "lỗi, không thể lấy địa chỉ IP public."
 fi
 
 # The execution of update
@@ -68,8 +68,8 @@ update=`eval ${update_cmd[@]} --data $json_data_v4`
 # The moment of truth
 case "$update" in
 *'"success":true'*)
-  echo -e "Update for A record '${record_name} (${record_identifier})' succeeded.\\n  - Old value: ${old_ip}\\n  + New value: ${ip}";;
+  echo -e "cập nhật cho A record '${record_name} (${record_identifier})' thành công.\\n  - IP cũ: ${old_ip}\\n  + IP mới: ${ip}";;
 *)
-  >&2 echo -e "Update for A record '${record_name} (${record_identifier})' failed.\\nDUMPING RESULTS:\\n${update}"
+  >&2 echo -e "cập nhật cho A record '${record_name} (${record_identifier})' thất bại.\\nDUMPING RESULTS:\\n${update}"
   exit 1;;
 esac
