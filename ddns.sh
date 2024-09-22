@@ -52,10 +52,10 @@ echo -e "  > Fetched current DNS record value   : ${old_ip}"
 
 # Compare if they're the same
 if [ "${ip}" == "${old_ip}" ]; then
-  echo -e "Update for A record '${record_name} (${record_identifier})' cancelled.\\n  Reason: IP has not changed."
+  echo -e "Cập nhật cho A record '${record_name} (${record_identifier})' đã hủy.\\n  Lí do: A record đã khớp với IP hiện tại."
   exit 0
 else
-  echo -e "  > Different IP addresses detected, synchronizing..."
+  echo -e "  > Đã phát hiện IP mới, việc cập nhật đang được thực hiện"
 fi
 
 # The secret sause for executing the update
